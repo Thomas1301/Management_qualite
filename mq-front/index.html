@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +13,31 @@
 <body>
     <div class="main">
         <h1>🙎Liste des clients</h1>
-        <input type="text" placeholder="Filtrer par nom, prénom..." class="inputResearch" id="searchInput" onkeydown="filterUserList();"/>
+        <input type="text" placeholder="Filtrer par nom, prénom..." class="inputResearch" id="searchInput" onkeydown="filterUserList()" onkeyup="filterUserList()"/>
         <p><span id="res"></span></p>
         <ul class="userList">
             
         </ul>
     </div>
     <div class="banner">
-        <p>Réalisé par Guilhem, Thomas & Alexandre</p>
+        <div class="userDetail" id="userDetail">
+            <div class="detailHeader">
+                <img id="detailImg" src="./imgs/default-user-image.png"/>
+                <div class="detailNames">
+                    <p>Nom : <span id="detailName"></span></p>
+                    <p>Prénom : <span id="detailFirstName"></span></p>
+                </div>
+            </div>
+            <div class="detailBody">
+                <p>Date de naissance : <span id="detailBirthDate"></span></p>
+                <p>Adresse : <span id="detailAdress"></span></p>
+                <p>CP : <span id="detailZipCode"></span></p>
+                <p>Ville : <span id="detailCity"></span></p>
+            </div>
+        </div>
+        <p class="credits">Réalisé par Guilhem, Thomas & Alexandre</p>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

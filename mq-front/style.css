@@ -48,13 +48,50 @@ h1 {
   justify-content: space-evenly;
 }
 .picture {
-  background-color: red;
+  background: url("./imgs/default-user-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem 0 0 0.5rem;
   width: 24%;
   height: 8rem;
 }
 
 .banner {
+  position: relative;
   display: none;
+}
+
+/* User Detail */
+.userDetail {
+  background-color: white;
+  border-radius: 1rem;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.detailHeader {
+  display: flex;
+  gap: 6%;
+  margin-bottom: 2rem;
+}
+.detailNames {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#detailImg {
+  width: 8rem;
+  height: 8rem;
 }
 
 @media screen and (min-width: 900px) {
@@ -64,11 +101,15 @@ h1 {
     background: linear-gradient(201.14deg, #f127d1 3.5%, #5054b5 91.07%);
     display: flex;
     align-items: flex-end;
+    flex-direction: column;
   }
-  .banner p {
+  .credits {
     margin: 1rem;
     background-color: white;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
   }
 }
