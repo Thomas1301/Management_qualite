@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.main {
+  width: fit-content;
+  margin-left: 8%;
+  margin-right: auto;
+}
+
+.inputResearch {
+  margin-left: 8%;
+  height: 1.5rem;
+  width: 100%;
+}
+
+/* User */
+.userList {
+  overflow-y: auto;
+  max-height: 64vh;
+}
+.userList li {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.user {
+  display: flex;
+}
+.userInfos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8%;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+.picture {
+  background-color: red;
+  width: 24%;
+  height: 8rem;
+}
+
+.banner {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .banner {
+    height: 100vh;
+    width: 38%;
+    background: linear-gradient(201.14deg, #f127d1 3.5%, #5054b5 91.07%);
+    display: flex;
+    align-items: flex-end;
+  }
+  .banner p {
+    margin: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
